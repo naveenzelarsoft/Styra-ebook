@@ -248,7 +248,9 @@ After you configure Okta, you must configure styra-das-id.styra.com.
   - **Provider name:** Enter the name for your identity provider setting.
   - **Private key:** Use command to generate a private key and the associated certificate. Enter the private key.
 
-```| openssl req -x509 -newkey rsa:2048 -keyout private.key -out certificate.cert -days 3650 -nodes -subj "/CN=styra-das-id.styra.com" |```
+```
+ openssl req -x509 -newkey rsa:2048 -keyout private.key -out certificate.cert -days 3650 -nodes -subj "/CN=styra-das-id.styra.com" 
+```
 
 Note: Type the above command in your terminal, it will generate private.key and certificate.cert files.
 
@@ -379,7 +381,8 @@ To Create an Envoy system using API run the below command .(Linux terminal,Git b
 
 Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSystem) : [https://docs.styra.com/api#tag/systems/operation/CreateSystem](https://docs.styra.com/api#tag/systems/operation/CreateSystem)
 
-```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}' |```
+```
+ curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}' ```
 
 - In the place of API\_TOKEN & TENANT we have to pass the API Token and Tenant Id of your Styra Das Account.
 
@@ -459,11 +462,12 @@ being used by someone.
 - To Create a secret Passphrase run the below command.
 - Note: If you don't create a passphrase with SSH key generation leave the secret as empty and run the following command.
 
-```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/passphrase -d '{
+```
+ curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/passphrase -d '{
  "description": "passphrase for git ssh key",
  "name": "ssh-passphrase",
  "secret": "passphrase\_key"
- }' |
+ }' 
 ```
 ####
 
@@ -476,18 +480,20 @@ being used by someone.
 - To Create a secret SSH Private Key run the below command.
 - In **Secre** t paste the **private key** which is generated from the helper bash script.
 
-```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/key -d '{
+```
+ curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/key -d '{
  "description": "git ssh key",
  "name": "ssh\_key",
  "secret":"Enter the private SSH key"
- }' |
+ }' 
 ```
 
 **Git integration configuration (SSH) can happen at the same time as system creation.**
 
 - To Create a system with git integration(SSH) run the below command.
 
-```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
+```
+curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
  "name": "Envoy",
  "description": "Envoy system",
  "type": "template.envoy:2.0",
@@ -504,8 +510,6 @@ being used by someone.
  }
  }
  }'
-
- |
 ```
 - The envoy system created with ssh Git integration as shown below.
 
