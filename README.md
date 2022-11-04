@@ -277,13 +277,13 @@ Note: Type the above command in your terminal, it will generate private.key and 
 
 1. If you have selected just-in-time provisioning for the users, then you can now logout from styra-das-id.styra.com and sign-in again through SAML. SAML is now displayed on the styra-das-id.styra.com login screen above the username and password.
 
-![](RackMultipart20221104-1-7ncb7v_html_b42702563be2e5b8.png)
+![](./images/A1.png)
 
 **System creation in DAS:**
 
 - Login to StyraDAS tenent
 
-![](RackMultipart20221104-1-7ncb7v_html_6f70d3263f9d8b26.png)
+![](./images/A1.png)
 
 - Styra DAS account is required
 - If you don't have a Styra DAS tenant, you can [sign up for a free tenant here](https://signup.styra.com/?_ga=2.47247396.283531518.1641954102-757179015.1635396444)([Signup](https://signup.styra.com/?_ga=2.47247396.283531518.1641954102-757179015.1635396444))
@@ -294,7 +294,7 @@ To demonstrate the enforcement of ingress and egress policies for a sample appli
 
 To add a new Istio system, click the ( ⨁ ) plus icon next to SYSTEMS on the left side of the navigation panel.
 
-![](RackMultipart20221104-1-7ncb7v_html_e915730faca49e55.png)
+![](./images/A2.png)
 
 Create an Istio System in StyraDAS
 
@@ -323,7 +323,7 @@ HTTPS
 
 Styra recommends to use a GitHub Personal access token. You can generate a token at [github.com/settings/token](https://github.com/settings/tokens) or by clicking through Your-picture and navigate to Settings \>\> Developer Settings \>\> Personal access tokens.
 
-- Git repository (required): A Git **HTTPS URL** to your Git repository. For example: ![](RackMultipart20221104-1-7ncb7v_html_6259b5beef7a95bf.png)
+- Git repository (required): A Git **HTTPS URL** to your Git repository. For example: ![](./images/A3.png)
 - Git reference: Specify a tag or branch reference (defaults to refs/heads/master—the master branch).
 - Git commit SHA: Specify a commit SHA.
 - Repository path: (_Optional_) The subdirectory where you want to save the policies.
@@ -332,11 +332,11 @@ Click the Save changes button.
 
 - Click on Test connection and we can observe the connected with green tick mark as below
 
-![](RackMultipart20221104-1-7ncb7v_html_7ad7936ed04d32f4.png)
+![](./images/A4.png)
 
 - We can also notice that the Git repository has been tracked along with the master branch as reference.
 
-![](RackMultipart20221104-1-7ncb7v_html_8ff4a260069a7e62.png)
+![](./images/A5.png)
 
 **Git as a storage:**
 
@@ -345,15 +345,15 @@ Styra DAS supports using Git as a storage mechanism for policies. Each system ca
 - Make a policy change in the Styra editor.
 - Promote the change. Styra pushes this policy to our GitHub repository in a special branch.
 
-![](RackMultipart20221104-1-7ncb7v_html_45649ab2892b9ec9.png)
+![](./images/A6.png)
 
 After pushing the changes we see the differences in the Github repository as below
 
-![](RackMultipart20221104-1-7ncb7v_html_563b0992aee7a523.png)
+![](./images/A7.png)
 
 And the rego policy file will be added.
 
-![](RackMultipart20221104-1-7ncb7v_html_f9cd78977799bb0c.png)
+![](./images/A8.png)
 
 **Creating a System in Styra DAS using API**
 
@@ -367,11 +367,11 @@ Prerequisite:
 
 - Go to WorkSpace —--> Settings —-> API Tokens and click on Add API Token as shown below.
 
-![](RackMultipart20221104-1-7ncb7v_html_9d68f32d5ab00af9.png)
+![](./images/B1.png)
 
 - Add the required fields and click on Add API token and save the API Token
 
-![](RackMultipart20221104-1-7ncb7v_html_ec73ae9750e42101.png)
+![](./images/B2.png)
 
 **Create a Envoy System:**
 
@@ -387,7 +387,7 @@ Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSyst
   - System type (required)
   - System name (required)
 
-We can see the system Created in the UI as shown below.. ![](RackMultipart20221104-1-7ncb7v_html_bc5199b248fe6127.png)
+We can see the system Created in the UI as shown below.. ![](./images/B3.png)
 
 **Git Integration**
 
@@ -425,13 +425,13 @@ being used by someone.
 
 ```ssh-keygen -t rsa - **b** 4096 -C "Email"```
 
-![](RackMultipart20221104-1-7ncb7v_html_3bf23ddab7a712a3.png)
+![](./images/B4.png)
 
 - Click enter
 - Enter passphrase or leave it blank and click enter
 - SSH key is created in the .ssh folder
 
-![](RackMultipart20221104-1-7ncb7v_html_956a93d58625bb52.png)
+![](./images/B5.png)
 
 - Copy the **id\_rsa.pub** key and add it to your Github account.
 - To add the key to github go to **settings —SSH and GPG keys** and click on the **new ssh key** and paste the public key and save it.
@@ -509,9 +509,9 @@ being used by someone.
 ```
 - The envoy system created with ssh Git integration as shown below.
 
-![](RackMultipart20221104-1-7ncb7v_html_cdbd363a1054ba0b.png)
+![](./images/B6.png)
 
-![](RackMultipart20221104-1-7ncb7v_html_589571409fcec635.png)
+![](./images/B7.png)
 
 (After clicking the Test-connection button in DAS- The above error came)
 
@@ -568,7 +568,7 @@ Here
 ```
 The envoy system created with https Git integration as shown below.
 
-![](RackMultipart20221104-1-7ncb7v_html_7d6f2d23a65186ff.png)
+![](./images/B8.png)
 
 **Creation of Stack and adding systems to stack:**
 
@@ -583,7 +583,7 @@ The envoy system created with https Git integration as shown below.
 4. It is optional to type a description in the **Description** field.
 5. Click **Add stack**.
 
-![](RackMultipart20221104-1-7ncb7v_html_23b4daf87b78329f.png)
+![](./images/C1.png)
 
 **Add Systems to Stack:**
 
@@ -596,11 +596,11 @@ System label and selector label should match in order to apply stack rules to th
 1. Open the **Selectors** module.
 2. Fill out the include Key and Values fields with a label key-value pair, such as "environment" and "Dev" as shown in the below image..
 
-![](RackMultipart20221104-1-7ncb7v_html_5dc63ece8e79eb91.png)
+![](./images/C2.png)
 
 3. Click on the **publish** icon in order to activate your changes.
 
-![](RackMultipart20221104-1-7ncb7v_html_89fbf97454fd736b.png)
+![](./images/C3.png)
 
 **Add a label to the system:**
 
@@ -610,7 +610,7 @@ System label and selector label should match in order to apply stack rules to th
 4. Enter a "Key and Value" pair that matches the selector you defined previously.
 5. Click on the publish icon to activate your changes.
 
-![](RackMultipart20221104-1-7ncb7v_html_88fdd5a3053d5d0f.png)
+![](./images/C4.png)
 
 **Verify the connection:**
 
@@ -619,7 +619,7 @@ To verify if the systems are connected to your stack:
 1. Return to the stack's Selectors module.
 2. Click the Preview button and you can see the corresponding system name and id as shown in the image below.
 
-![](RackMultipart20221104-1-7ncb7v_html_147ae1860b61d538.png)
+![](./images/c5.png)
 
 **Add a Stack Rule:**
 
@@ -635,12 +635,12 @@ You can click Validate while viewing a stack policy to run tests, perform an aud
 
 By validating we can check whether the system is compliant or not as shown in the below images.
 
-![](RackMultipart20221104-1-7ncb7v_html_3c79ad16516d50d7.png)
+![](./images/C6.png)
 
-![](RackMultipart20221104-1-7ncb7v_html_d2daf9e1dcf05c53.png)
+![](./images/C7.png)
 
 The Compliance pane only lists violations of the stack's rules and the Decisions pane only displays outcomes that changed because of a stack rule.
 
-![](RackMultipart20221104-1-7ncb7v_html_3b7f444f2f3767b9.png)
+![](./images/C8.png)
 
 After validating you can click the publish icon to apply your changes.
