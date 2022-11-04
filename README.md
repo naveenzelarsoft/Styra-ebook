@@ -249,7 +249,6 @@ After you configure Okta, you must configure styra-das-id.styra.com.
   - **Private key:** Use command to generate a private key and the associated certificate. Enter the private key.
 
 ```| openssl req -x509 -newkey rsa:2048 -keyout private.key -out certificate.cert -days 3650 -nodes -subj "/CN=styra-das-id.styra.com" |```
-| --- |
 
 Note: Type the above command in your terminal, it will generate private.key and certificate.cert files.
 
@@ -381,7 +380,6 @@ To Create an Envoy system using API run the below command .(Linux terminal,Git b
 Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSystem) : [https://docs.styra.com/api#tag/systems/operation/CreateSystem](https://docs.styra.com/api#tag/systems/operation/CreateSystem)
 
 ```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}' |```
-| --- |
 
 - In the place of API\_TOKEN & TENANT we have to pass the API Token and Tenant Id of your Styra Das Account.
 
@@ -508,7 +506,6 @@ being used by someone.
  }'
 
  |
-| --- |
 ```
 - The envoy system created with ssh Git integration as shown below.
 
@@ -538,11 +535,12 @@ Note:Error Resolved (Make sure copy the Entire key from **-----BEGIN OPENSSH PRI
 - Setup a secret that allows Styra to read and write to your Git repository.
 - To create a Secret run the following command
 
-```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/httpscred -d '{
+```
+| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/httpscred -d '{
  "name": "git-user-name",
  "secret": "token value"
  }' |
-| --- |
+
 ```
 Here
 
@@ -567,7 +565,6 @@ Here
  }
  }
  }' |
-| --- |
 ```
 The envoy system created with https Git integration as shown below.
 
