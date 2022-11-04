@@ -427,7 +427,7 @@ being used by someone.
 
 - To Generate SSH key run the following command in the git bash with your (git hub) email address in the place of Email.
 
-```ssh-keygen -t rsa - **b** 4096 -C "Email"```
+```ssh-keygen -t rsa -b 4096 -C "Email"```
 
 ![](./images/B4.png)
 
@@ -450,7 +450,7 @@ being used by someone.
  line\_count=`wc -l ${SSH_FILE_PATH} | awk '{print $1}'`
  last\_new\_line=`expr $line_count - 1`
 
- cat $SSH\_FILE\_PATH | sed '1s/$/\\n/' | sed ""$last\_new\_line"s/$/\\\n/" | tr -d '\n' |
+ cat $SSH\_FILE\_PATH | sed '1s/$/\\n/' | sed ""$last\_new\_line"s/$/\\\n/" | tr -d '\n'
 ```
 - Run the bash script(command: bash filename.sh) and Save the private key
 - Once you have your private SSH key created on your repository, you will need to create the two secret objects required for configuring SSH authentication: **passphrase** and **SSH private Key**.
@@ -541,10 +541,10 @@ Note:Error Resolved (Make sure copy the Entire key from **-----BEGIN OPENSSH PRI
 - To create a Secret run the following command
 
 ```
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/httpscred -d '{
+curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/httpscred -d '{
  "name": "git-user-name",
  "secret": "token value"
- }' |
+ }'
 
 ```
 Here
@@ -557,7 +557,7 @@ Here
 
 - To Create a system with git integration(HTTPS) run the below command.
 ```
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
+curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
  "name": "Envoy-https",
  "description": "envoy-test",
  "type": "template.envoy:2.0",
@@ -569,7 +569,7 @@ Here
  "reference": "refs/heads/main"
  }
  }
- }' |
+ }'
 ```
 The envoy system created with https Git integration as shown below.
 
