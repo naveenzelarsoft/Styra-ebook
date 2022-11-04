@@ -6,7 +6,7 @@ Prerequisites:
 
 Login to Okta admin and navigate to **Applications**
 
-![](RackMultipart20221104-1-7ncb7v_html_cf4d6a86272e8646.png)
+![](https://github.com/venu67776/https/blob/main/images/image%20(1).png)
 
 Click on **Create App integration**
 
