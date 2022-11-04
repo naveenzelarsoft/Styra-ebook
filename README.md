@@ -6,7 +6,7 @@ Prerequisites:
 
 Login to Okta admin and navigate to **Applications**
 
-![Image](https://github.com/naveenzelarsoft/Styra-ebook/blob/master/images/okta%20admin%20page(1).png)
+![Image](./images/okta%20admin%20page(1).png)
 
 Click on **Create App integration**
 
@@ -19,7 +19,7 @@ Then provide the required details to configure okta.
 
 Choose the options as mentioned below given the reference image for it **.**
 
-![](images/New app integration(2).png)
+![](./images/New%20app%20integration(2).pngimages/New app integration(2).png)
 
 Click on Next.
 
@@ -51,19 +51,19 @@ NOTE: To prepare Google OpenID Connect for signing on to \<das-id\>.styra.com
 1. Sign in to the Google Developers Console at https://console.developers.google.com/start
 2. Select an **existing project** or click Create **New Project** to create a new one
 
-![](../images/img3.png)
+![](./images/img3.png)
 
 1. From the left-hand navigation panel, click Credentials.
 
-![](RackMultipart20221104-1-7ncb7v_html_99146a57f4e98c2f.png)
+![](./images/img4.png)
 
 4.Click **Create Credentials** button to open the menu, and then click **OAuth client ID**.
 
-![](RackMultipart20221104-1-7ncb7v_html_741bbf2ccd1fe573.png)
+![](./images/img5.png)
 
 Note: To create an **OAuth client ID** you must first configure your **consent screen**
 
-![](RackMultipart20221104-1-7ncb7v_html_45313fef2d5b1c69.png)
+![](./images/img6.png)
 
 What is the OAuth [consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent)?
 
@@ -71,13 +71,13 @@ When you use OAuth 2.0 for authorization, your app requests authorizations for o
 
 - Fill the Mandatory(\*) fields and click on Save & Continue
 
-![](RackMultipart20221104-1-7ncb7v_html_132b1ca2309701ef.png) ![](RackMultipart20221104-1-7ncb7v_html_c2a3497bb6052d4a.png)
+![](./images/img7.png) ![](./images/img9.png)
 
-5. For Application type, select **Web application**.
+1. For Application type, select **Web application**.
 
-![](RackMultipart20221104-1-7ncb7v_html_4ea7082f1e6be590.png)
+![](./images/img10.png)
 
-6. Enter the form with the following details and click Create.
+1. Enter the form with the following details and click Create.
 
 - **Name** : Styra (or anything you prefer).
 - **Authorized redirect URIs:** ***https://\<das-id\>.styra.com/v1/oauth2/callback***
