@@ -146,7 +146,7 @@ If we **Disable** , when user tries to login using SSO with google the below Err
 
 **Error:3** If **Client Id** and **client secret** are incorrect the below Error will get.
 
-![](./images/22.png) ![](./)
+![](./images/22.png) ![](./images/Okta1.png)
 
 ###
 
@@ -181,21 +181,21 @@ Prerequisite:
 
 1. On the **administrator dashboard** , click **Add Applications** and select **Create New App Integration.**
 
-![](RackMultipart20221104-1-7ncb7v_html_cf4d6a86272e8646.png)
+![](./images/okta2.png)
 
 1. Enter the following details in the form and then click Create.
   - Sign in method: Select SAML 2.0.
 
-![](RackMultipart20221104-1-7ncb7v_html_54c7770b8cf391e4.png)
+![](./images/okta3.png)
 
 1. Enter the following details in the General Settings form and click **Next**.
   - App name: **Styra (or anything you prefer).**
 
-![](RackMultipart20221104-1-7ncb7v_html_570441c3fc6d6327.png)
+![](./images/okta4.png)
 
 1. Enter the following details in the SAML Settings located in the **General Settings** form and then click **Next**.
 
-![](RackMultipart20221104-1-7ncb7v_html_294062ddc0cb9832.png)
+![](./images/okta5.png)
 
 - **Single sign on URL:** For example, in https://styra-das-id.styra.com/v1/saml/ssosaml/callback replace styra-das-id.styra.com with your tenant name and ssosaml with the provider name.
 
@@ -208,29 +208,29 @@ Prerequisite:
 
 - Name ID Format: **EmailAddress**.
 
-![](RackMultipart20221104-1-7ncb7v_html_b7fb7ed42d0a75e4.png)
+![](./images/okta6.png)
 
 1. Select an appropriate option on the **Help Okta Support** understand how you configured this application form and click **Finish**.
 
 1. The next form shows the settings you have created.
   - On the **General tab,** confirm the **SAML settings and configure** any additional specific settings if needed.
 
-![](RackMultipart20221104-1-7ncb7v_html_55eca28f78522542.png)
+![](./images/okta7.png)
 
 1. Select the **Sign On tab** and click on the **View Setup Instructions button**.
   - From the **Optional section at the bottom** , record the **IDP metadata** from **the Provide the following IDP metadata to your SP provider field**. This value will be used when you configure the settings on styra-das-id.styra.com.
 
-![](RackMultipart20221104-1-7ncb7v_html_d454fd04d72b3d95.png)
+![](./images/okta8.png)
 
 1. Now, select the **Assignments tab** to identify the users entitled to access styra-das-id.styra.com.
   - Click **Assign** , select **Assign to People**.
 
-![](RackMultipart20221104-1-7ncb7v_html_c7639fa3fdfb1032.png)
+![](./images/okta9.png)
 
 - Click **Assign** and Save to go back to the selected people.
 - When all the users are assigned, click **Done**.
 
-![](RackMultipart20221104-1-7ncb7v_html_a41785f898175dc5.png)
+![](./images/okta10.png)
 
 ## **Styra Configuration** [**​**](https://docs.styra.com/administration/sso-authentication/saml/okta#styra-configuration)
 
@@ -238,11 +238,11 @@ After you configure Okta, you must configure styra-das-id.styra.com.
 
 1. Login to styra-das-id.styra.com with your **username and password**.
 
-![](RackMultipart20221104-1-7ncb7v_html_89c96acb800d2036.png)
+![](./images/okta11.png)
 
 1. Go to your Workspace, click A **ccess Control \>\> Single Sign-On Providers and then click SAML \>\> + Add SAML Provider.**
 
-![](RackMultipart20221104-1-7ncb7v_html_5e9ebb7e8bf6b043.png)
+![](./images/okta12.png)
 
 1. Enter the following details in the form.
   - **Provider name:** Enter the name for your identity provider setting.
@@ -252,18 +252,18 @@ After you configure Okta, you must configure styra-das-id.styra.com.
 
 Note: Type the above command in your terminal, it will generate private.key and certificate.cert files.
 
-![](RackMultipart20221104-1-7ncb7v_html_72b532ecc10798ab.png)
+![](./images/okta13.png)
 
 - **Private key certificate:** Enter the above generated certificate.
 
 - **Identity provider metadata** : Enter the IDP metadata.
 
-![](RackMultipart20221104-1-7ncb7v_html_d454fd04d72b3d95.png)
+![](./images/okta14.png)
 
 - **Email attribute** : Leave it empty as the SAML response from Okta does have the email address in the Subject tag.
 - **Allowed Domains:** Type the allowed authentication domain(s) of your users. For example, (zelarsoft.com). If the identity provider supports multiple domains, only users with these domains are allowed to access the service.
 
-![](RackMultipart20221104-1-7ncb7v_html_9c76147345043919.png)
+![](./images/okta15.png)
 
 - Allow identity provider to initiate sign in:
   - **If enabled,** identity provider can initiate the single sign on.
@@ -273,7 +273,7 @@ Note: Type the above command in your terminal, it will generate private.key and 
   - **If disabled,** a new user account will be created just-in-time for any authenticated user, as long as the user's domain matches one of the allowed domains (and the identity provider has assigned the new user to the Styra application).
 - **Enabled:** Set it to TRUE.
 
-![](RackMultipart20221104-1-7ncb7v_html_d0d715569011c957.png)
+![](./images/okta16.png)
 
 1. If you have selected just-in-time provisioning for the users, then you can now logout from styra-das-id.styra.com and sign-in again through SAML. SAML is now displayed on the styra-das-id.styra.com login screen above the username and password.
 
