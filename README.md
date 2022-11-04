@@ -82,11 +82,11 @@ When you use OAuth 2.0 for authorization, your app requests authorizations for o
 - **Name** : Styra (or anything you prefer).
 - **Authorized redirect URIs:** ***https://\<das-id\>.styra.com/v1/oauth2/callback***
 
-![](RackMultipart20221104-1-7ncb7v_html_d4811b6eb116295e.png) ![](RackMultipart20221104-1-7ncb7v_html_3e8c415e0e713055.png)
+![](./images/11.png) ![](./images/12.png)
 
-7. The OAuth client created window will pop up with two pieces of data, Your **Client ID** and **Your Client Secret**. You must record this information in order to configure Styra in the next section.
+1. The OAuth client created window will pop up with two pieces of data, Your **Client ID** and **Your Client Secret**. You must record this information in order to configure Styra in the next section.
 
-![](RackMultipart20221104-1-7ncb7v_html_f49eee18c10ed75b.png)
+![](./images/13.png)
 
 At this point, Google is configured and you must configure \<das-id\>.styra.com
 
@@ -100,15 +100,15 @@ At this point, Google is configured and you must configure \<das-id\>.styra.com
 
 1. Sign in to \<das-id\>.styra.com with your username and password.
 
-![](RackMultipart20221104-1-7ncb7v_html_7d0838e842a14e4b.png)
+![](./images/14.png)
 
 2. Go to your **Workspace, click Access Control \>\> Single Sign-On Providers** and then click **OpenID Connect \>\> + Add OpenID Connect Provider**.
 
-![](RackMultipart20221104-1-7ncb7v_html_cfe869da914bd66d.png)
+![](./images/15.png)
 
 3. Enter the form with the following details:
 
-![](RackMultipart20221104-1-7ncb7v_html_d3ff6922d8bc8b6f.png)
+![](./images/16.png)
 
 - **Provider name** : Google (or anything you prefer).
 - **I**** ssuer URL**: https://accounts.google.com.
@@ -121,7 +121,7 @@ At this point, Google is configured and you must configure \<das-id\>.styra.com
   - **If disabled** , a new user account will be created just-in-time for any authenticated user, as long as the user's domain matches one of the allowed domains (and the identity provider has assigned this user to the Styra application).
 - **Enabled:** set it to TRUE.
 
-![](RackMultipart20221104-1-7ncb7v_html_7d0838e842a14e4b.png)
+![](./images/17.png)
 
 1. If you selected just-in-time provisioning for the users, you can now **logout** from \<das-id\>.styra.com and **sign-in again** using Google.
 2. Google is now displayed on ***\<das-id\>***.styra.com login screen above the username and password. (As shown in the screenshot above)
@@ -134,7 +134,7 @@ Only the allowed domain(zelarsoft.com) users can login using SSO with Google int
 
 Note: If other Domain(\*\*\*\*.com) users try to login using SSO with google they get below authorization error.
 
-![](RackMultipart20221104-1-7ncb7v_html_be41a8683132879b.png) ![](RackMultipart20221104-1-7ncb7v_html_fd6b3e63fa4c3536.png)
+![](./images/18.png) ![](./images/19.png)
 
 **Error: 2**
 
@@ -142,11 +142,11 @@ If we **Enable** Invited users only in OpenID Connect Provider, Only those who a
 
 If we **Disable** , when user tries to login using SSO with google the below Error will display.
 
-![](RackMultipart20221104-1-7ncb7v_html_3625331de0565ba1.png) ![](RackMultipart20221104-1-7ncb7v_html_c5eb263f43be0273.png)
+![](./images/20.png) ![](./images/21.png)
 
 **Error:3** If **Client Id** and **client secret** are incorrect the below Error will get.
 
-![](RackMultipart20221104-1-7ncb7v_html_b1334af492c4f2d5.png) ![](RackMultipart20221104-1-7ncb7v_html_93bdc3a0f9c0f77.png)
+![](./images/22.png) ![](./)
 
 ###
 
