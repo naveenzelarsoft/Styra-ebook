@@ -27,7 +27,7 @@ Enter the following details in the settings.
 
 - **Application name:** Styra (or anything you prefer).
 - **Application logo:** Upload one.
-- **Login redirect URIs:** https://\<das-id\>.styra.com/v1/oauth2/callback.
+- **Login redirect URIs:** ***https://\<das-id\>.styra.com/v1/oauth2/callback***
 - **Logout redirect URIs:** None.
 - **Assignments:** Choose any one as per your preference.
 
@@ -80,7 +80,7 @@ When you use OAuth 2.0 for authorization, your app requests authorizations for o
 6. Enter the form with the following details and click Create.
 
 - **Name** : Styra (or anything you prefer).
-- **Authorized redirect URIs:** https://\<das-id\>.styra.com/v1/oauth2/callback
+- **Authorized redirect URIs:** ***https://\<das-id\>.styra.com/v1/oauth2/callback***
 
 ![](RackMultipart20221104-1-7ncb7v_html_d4811b6eb116295e.png) ![](RackMultipart20221104-1-7ncb7v_html_3e8c415e0e713055.png)
 
@@ -124,7 +124,7 @@ At this point, Google is configured and you must configure \<das-id\>.styra.com
 ![](RackMultipart20221104-1-7ncb7v_html_7d0838e842a14e4b.png)
 
 1. If you selected just-in-time provisioning for the users, you can now **logout** from \<das-id\>.styra.com and **sign-in again** using Google.
-2. Google is now displayed on \<das-id\>.styra.com login screen above the username and password. (As shown in the screenshot above)
+2. Google is now displayed on ***\<das-id\>***.styra.com login screen above the username and password. (As shown in the screenshot above)
 
 **Errors & Troubleshooting:**
 
@@ -248,7 +248,7 @@ After you configure Okta, you must configure styra-das-id.styra.com.
   - **Provider name:** Enter the name for your identity provider setting.
   - **Private key:** Use command to generate a private key and the associated certificate. Enter the private key.
 
-| openssl req -x509 -newkey rsa:2048 -keyout private.key -out certificate.cert -days 3650 -nodes -subj "/CN=styra-das-id.styra.com" |
+```| openssl req -x509 -newkey rsa:2048 -keyout private.key -out certificate.cert -days 3650 -nodes -subj "/CN=styra-das-id.styra.com" |```
 | --- |
 
 Note: Type the above command in your terminal, it will generate private.key and certificate.cert files.
@@ -324,7 +324,7 @@ HTTPS
 
 Styra recommends to use a GitHub Personal access token. You can generate a token at [github.com/settings/token](https://github.com/settings/tokens) or by clicking through Your-picture and navigate to Settings \>\> Developer Settings \>\> Personal access tokens.
 
-- Git repository (required): A Git HTTPS URL to your Git repository. For example: ![](RackMultipart20221104-1-7ncb7v_html_6259b5beef7a95bf.png)
+- Git repository (required): A Git **HTTPS URL** to your Git repository. For example: ![](RackMultipart20221104-1-7ncb7v_html_6259b5beef7a95bf.png)
 - Git reference: Specify a tag or branch reference (defaults to refs/heads/master—the master branch).
 - Git commit SHA: Specify a commit SHA.
 - Repository path: (_Optional_) The subdirectory where you want to save the policies.
@@ -366,7 +366,7 @@ Prerequisite:
 
 **Create a API Token using GUI:**
 
-- Go to WorkSpace —-- Settings —- API Tokens and click on Add API Token as shown below.
+- Go to WorkSpace —--> Settings —-> API Tokens and click on Add API Token as shown below.
 
 ![](RackMultipart20221104-1-7ncb7v_html_9d68f32d5ab00af9.png)
 
@@ -380,7 +380,7 @@ To Create an Envoy system using API run the below command .(Linux terminal,Git b
 
 Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSystem) : [https://docs.styra.com/api#tag/systems/operation/CreateSystem](https://docs.styra.com/api#tag/systems/operation/CreateSystem)
 
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}' |
+```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}' |```
 | --- |
 
 - In the place of API\_TOKEN & TENANT we have to pass the API Token and Tenant Id of your Styra Das Account.
@@ -425,7 +425,7 @@ being used by someone.
 
 - To Generate SSH key run the following command in the git bash with your (git hub) email address in the place of Email.
 
-ssh-keygen -t rsa - **b** 4096 -C "Email"
+```ssh-keygen -t rsa - **b** 4096 -C "Email"```
 
 ![](RackMultipart20221104-1-7ncb7v_html_3bf23ddab7a712a3.png)
 
@@ -440,16 +440,16 @@ ssh-keygen -t rsa - **b** 4096 -C "Email"
 - Once you have attained your private SSH key( **id\_rsa** ), you must convert it to the following sample format.
 - This format requires you to pass the full key in a single line while making sure to include \n pre-pending and appending the key. use the helper bash script to format your private key.
 
-| #!/bin/bash
- # Requires AWk and SED to be installed.
+``` 
+#!/bin/bash
+# Requires AWk and SED to be installed.
  export SSH\_FILE\_PATH="$HOME/.ssh/id\_rsa" #replace this with path to your private SSH key
 
  line\_count=`wc -l ${SSH_FILE_PATH} | awk '{print $1}'`
  last\_new\_line=`expr $line_count - 1`
 
  cat $SSH\_FILE\_PATH | sed '1s/$/\\n/' | sed ""$last\_new\_line"s/$/\\\n/" | tr -d '\n' |
-| --- |
-
+```
 - Run the bash script(command: bash filename.sh) and Save the private key
 - Once you have your private SSH key created on your repository, you will need to create the two secret objects required for configuring SSH authentication: **passphrase** and **SSH private Key**.
 
@@ -461,13 +461,12 @@ ssh-keygen -t rsa - **b** 4096 -C "Email"
 - To Create a secret Passphrase run the below command.
 - Note: If you don't create a passphrase with SSH key generation leave the secret as empty and run the following command.
 
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/passphrase -d '{
+```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/passphrase -d '{
  "description": "passphrase for git ssh key",
  "name": "ssh-passphrase",
  "secret": "passphrase\_key"
  }' |
-| --- |
-
+```
 ####
 
 
@@ -479,18 +478,18 @@ ssh-keygen -t rsa - **b** 4096 -C "Email"
 - To Create a secret SSH Private Key run the below command.
 - In **Secre** t paste the **private key** which is generated from the helper bash script.
 
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/key -d '{
+```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/ssh/key -d '{
  "description": "git ssh key",
  "name": "ssh\_key",
  "secret":"Enter the private SSH key"
  }' |
-| --- |
+```
 
 **Git integration configuration (SSH) can happen at the same time as system creation.**
 
 - To Create a system with git integration(SSH) run the below command.
 
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
+```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
  "name": "Envoy",
  "description": "Envoy system",
  "type": "template.envoy:2.0",
@@ -510,7 +509,7 @@ ssh-keygen -t rsa - **b** 4096 -C "Email"
 
  |
 | --- |
-
+```
 - The envoy system created with ssh Git integration as shown below.
 
 ![](RackMultipart20221104-1-7ncb7v_html_cdbd363a1054ba0b.png)
@@ -519,18 +518,19 @@ ssh-keygen -t rsa - **b** 4096 -C "Email"
 
 (After clicking the Test-connection button in DAS- The above error came)
 
-Note:Error Resolved (Make sure copy the Entire key from -----BEGIN OPENSSH PRIVATE KEY----- to -----END OPENSSH PRIVATE KEY----- which was generated by **bash script** ) to resolve the above error.
+Note:Error Resolved (Make sure copy the Entire key from **-----BEGIN OPENSSH PRIVATE KEY----- to -----END OPENSSH PRIVATE KEY-----** which was generated by **bash script** ) to resolve the above error.
 
 ## **Configure HTTPS Git authentication**
 
 - To configure Git Authentication using HTTPS
-  - Git username (required): Your Git username
-  - Git secret (required): The secret corresponding to your Git username.
-  - Git repository(Required): A Git SSH URL to your Git repository.
-  - Git reference: Specify a tag or branch reference (defaults to refs/heads/main—the main branch).
-  - Git commit SHA: Specify a commit SHA.
-  - Repository path: (_Optional_) The subdirectory where you want to save the policies.
-- Note: **Git secret** : Styra recommends to use a GitHub Personal access token. You can generate a token at [github.com/settings/token](https://github.com/settings/tokens) or by clicking through **Your-picture and navigate to Settings \>\> Developer Settings \>\> Personal access tokens**.
+  - **Git username (required):** Your Git username
+  - **Git secret (required):** The secret corresponding to your Git username.
+  - **Git repository(Required):** A Git SSH URL to your Git repository.
+  - **Git reference:** Specify a tag or branch reference (defaults to refs/heads/main—the main branch).
+  - **Git commit SHA:** Specify a commit SHA.
+  - **Repository path:** (_Optional_) The subdirectory where you want to save the policies.
+- **Note:**
+-  **Git secret:**  Styra recommends to use a GitHub Personal access token. You can generate a token at [github.com/settings/token](https://github.com/settings/tokens) or by clicking through **Your-picture and navigate to Settings \>\> Developer Settings \>\> Personal access tokens**.
 - Once you have your Git username and token , you will need to create the secret object required for configuring HTTPS authentication.
 
 **Create a secret for https credentials**
@@ -538,12 +538,12 @@ Note:Error Resolved (Make sure copy the Entire key from -----BEGIN OPENSSH PRIVA
 - Setup a secret that allows Styra to read and write to your Git repository.
 - To create a Secret run the following command
 
-| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/httpscred -d '{
+```| curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X **PUT** https://TENANT.styra.com/v1/secrets/git/httpscred -d '{
  "name": "git-user-name",
  "secret": "token value"
  }' |
 | --- |
-
+```
 Here
 
 - **git/httpscred** is the id of the secret.
@@ -553,7 +553,7 @@ Here
 **Git integration configuration (HTTPS) can happen at the same time as system creation.**
 
 - To Create a system with git integration(HTTPS) run the below command.
-
+```
 | curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -X POST https://TENANT.styra.com/v1/systems -d '{
  "name": "Envoy-https",
  "description": "envoy-test",
@@ -568,7 +568,7 @@ Here
  }
  }' |
 | --- |
-
+```
 The envoy system created with https Git integration as shown below.
 
 ![](RackMultipart20221104-1-7ncb7v_html_7d6f2d23a65186ff.png)
