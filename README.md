@@ -19,7 +19,7 @@ Then provide the required details to configure okta.
 
 Choose the options as mentioned below given the reference image for it **.**
 
-![](./images/New%20app%20integration(2).pngimages/New app integration(2).png)
+![](./images/New%20app%20integration(2).png)
 
 Click on Next.
 
