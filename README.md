@@ -382,7 +382,8 @@ To Create an Envoy system using API run the below command .(Linux terminal,Git b
 Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSystem) : [https://docs.styra.com/api#tag/systems/operation/CreateSystem](https://docs.styra.com/api#tag/systems/operation/CreateSystem)
 
 ```
- curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}' ```
+ curl -H "Content-Type: application/json" -H 'Authorization: Bearer \<API\_TOKEN\>' -X POST https://\<TENANT\>.styra.com/v1/systems -d '{"type": "template.envoy:2.0", "name": "Envoy"}'
+ ```
 
 - In the place of API\_TOKEN & TENANT we have to pass the API Token and Tenant Id of your Styra Das Account.
 
