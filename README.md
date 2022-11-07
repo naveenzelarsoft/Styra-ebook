@@ -7,7 +7,7 @@ Prerequisites:
 Login to Okta admin and navigate to **Applications**
 
 <!--- ![Image](./images/okta%20admin%20page(1).png) --->
-<p style="text-align:center;"> <img src="./images/okta%20admin%20page(1).png" width="300" height="100"> </p>
+<p style="text-align:center;"> <img src="./images/okta%20admin%20page(1).png" width="400" height=170"> </p>
 Click on **Create App integration**
 
 Then provide the required details to configure okta.
@@ -20,7 +20,7 @@ Then provide the required details to configure okta.
 Choose the options as mentioned below given the reference image for it **.**
 
 <!---![](./images/New%20app%20integration(2).png)--->
- <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" width="400" height="400" > </p>
+ <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" width="400" height="350" > </p>
 Click on Next.
 
 Enter the following details in the settings.
@@ -51,7 +51,7 @@ NOTE: To prepare Google OpenID Connect for signing on to \<das-id\>.styra.com
 1. Sign in to the Google Developers Console at https://console.developers.google.com/start
 2. Select an **existing project** or click Create **New Project** to create a new one
 
-![](./images/img3.png )
+<p style="text-align:center;"> <img src="./images/img3.png" width= 400 length= 300 > </p>
 
 1. From the left-hand navigation panel, click Credentials.
 
