@@ -20,7 +20,7 @@ Then provide the required details to configure okta.
 Choose the options as mentioned below given the reference image for it **.**
 
 <!---![](./images/New%20app%20integration(2).png)--->
- <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" > </p>
+ <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" width="400" height="400" > </p>
 Click on Next.
 
 Enter the following details in the settings.
