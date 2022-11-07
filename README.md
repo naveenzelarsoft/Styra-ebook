@@ -6,8 +6,8 @@ Prerequisites:
 
 Login to Okta admin and navigate to **Applications**
 
-![Image](./images/okta%20admin%20page(1).png)
-
+<!--- ![Image](./images/okta%20admin%20page(1).png) --->
+<p style="text-align:center;"> <img src="./images/okta%20admin%20page(1).png" width="300" height="100"> </p>
 Click on **Create App integration**
 
 Then provide the required details to configure okta.
@@ -19,8 +19,8 @@ Then provide the required details to configure okta.
 
 Choose the options as mentioned below given the reference image for it **.**
 
-![](./images/New%20app%20integration(2).png)
-
+<!---![](./images/New%20app%20integration(2).png)--->
+ <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" width="300" height="100"> </p>
 Click on Next.
 
 Enter the following details in the settings.
