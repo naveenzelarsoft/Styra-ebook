@@ -20,7 +20,7 @@ Then provide the required details to configure okta.
 Choose the options as mentioned below given the reference image for it **.**
 
 <!---![](./images/New%20app%20integration(2).png)--->
- <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" width="300" height="100"> </p>
+ <p style="text-align:center;"> <img src="./images/New%20app%20integration(2).png" > </p>
 Click on Next.
 
 Enter the following details in the settings.
@@ -51,19 +51,19 @@ NOTE: To prepare Google OpenID Connect for signing on to \<das-id\>.styra.com
 1. Sign in to the Google Developers Console at https://console.developers.google.com/start
 2. Select an **existing project** or click Create **New Project** to create a new one
 
-![](./images/img3.png)
+![](./images/img3.png )
 
 1. From the left-hand navigation panel, click Credentials.
 
-![](./images/img4.png)
+<p style="text-align:center;"> <img src="./images/img4.png" width= 400 length= 300 > </p>
 
 4.Click **Create Credentials** button to open the menu, and then click **OAuth client ID**.
 
-![](./images/img5.png)
+<p style="text-align:center;"> <img src="./images/img5.png" width= 400 length= 300 > </p>
 
 Note: To create an **OAuth client ID** you must first configure your **consent screen**
 
-![](./images/img6.png)
+<p style="text-align:center;"> <img src="./images/img6.png" width= 400 length= 400 > </p>
 
 What is the OAuth [consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent)?
 
@@ -71,22 +71,23 @@ When you use OAuth 2.0 for authorization, your app requests authorizations for o
 
 - Fill the Mandatory(\*) fields and click on Save & Continue
 
-![](./images/img7.png) ![](./images/img9.png)
-
+<p style="text-align:center;"> <img src="./images/img7.png" width= 400 length= 400 > </p> 
+<p style="text-align:center;"> <img src="./images/img9.png" width= 400 length= 400 > </p>
 1. For Application type, select **Web application**.
 
-![](./images/img10.png)
+<p style="text-align:center;"> <img src="./images/img10.png" width= 400 length= 400 > </p>
 
 1. Enter the form with the following details and click Create.
 
 - **Name** : Styra (or anything you prefer).
 - **Authorized redirect URIs:** ***https://\<das-id\>.styra.com/v1/oauth2/callback***
 
-![](./images/11.png) ![](./images/12.png)
+<p style="text-align:center;"> <img src="./images/11.png" width= 400 length= 400 > </p> 
+<p style="text-align:center;"> <img src="./images/12.png" width= 400 length= 400 > </p> 
 
 1. The OAuth client created window will pop up with two pieces of data, Your **Client ID** and **Your Client Secret**. You must record this information in order to configure Styra in the next section.
 
-![](./images/13.png)
+<p style="text-align:center;"> <img src="./images/13.png" width= 400 length= 400 > </p> 
 
 At this point, Google is configured and you must configure \<das-id\>.styra.com
 
@@ -100,15 +101,15 @@ At this point, Google is configured and you must configure \<das-id\>.styra.com
 
 1. Sign in to \<das-id\>.styra.com with your username and password.
 
-![](./images/14.png)
+<p style="text-align:center;"> <img src="./images/14.png" width= 200 length= 300 > </p> 
 
 2. Go to your **Workspace, click Access Control \>\> Single Sign-On Providers** and then click **OpenID Connect \>\> + Add OpenID Connect Provider**.
 
-![](./images/15.png)
+<p style="text-align:center;"> <img src="./images/15.png" width= 400 length= 300 > </p> 
 
 3. Enter the form with the following details:
 
-![](./images/16.png)
+<p style="text-align:center;"> <img src="./images/16.png" width= 300 length= 400 > </p>
 
 - **Provider name** : Google (or anything you prefer).
 - **I**** ssuer URL**: https://accounts.google.com.
@@ -121,7 +122,7 @@ At this point, Google is configured and you must configure \<das-id\>.styra.com
   - **If disabled** , a new user account will be created just-in-time for any authenticated user, as long as the user's domain matches one of the allowed domains (and the identity provider has assigned this user to the Styra application).
 - **Enabled:** set it to TRUE.
 
-![](./images/17.png)
+<p style="text-align:center;"> <img src="./images/17.png" width= 200 length= 300 > </p>
 
 1. If you selected just-in-time provisioning for the users, you can now **logout** from \<das-id\>.styra.com and **sign-in again** using Google.
 2. Google is now displayed on ***\<das-id\>***.styra.com login screen above the username and password. (As shown in the screenshot above)
@@ -134,7 +135,8 @@ Only the allowed domain(zelarsoft.com) users can login using SSO with Google int
 
 Note: If other Domain(\*\*\*\*.com) users try to login using SSO with google they get below authorization error.
 
-![](./images/18.png) ![](./images/19.png)
+<p style="text-align:center;"> <img src="./images/18.png" width= 200 length= 300 > </p> 
+<p style="text-align:center;"> <img src="./images/19.png" width= 200 length= 300 > </p>
 
 **Error: 2**
 
@@ -142,11 +144,13 @@ If we **Enable** Invited users only in OpenID Connect Provider, Only those who a
 
 If we **Disable** , when user tries to login using SSO with google the below Error will display.
 
-![](./images/20.png) ![](./images/21.png)
+<p style="text-align:center;"> <img src="./images/20.png" width= 400 length= 200 > </p> 
+<p style="text-align:center;"> <img src="./images/21.png" width= 400 length= 300 > </p> 
 
 **Error:3** If **Client Id** and **client secret** are incorrect the below Error will get.
 
-![](./images/22.png) ![](./images/Okta1.png)
+<p style="text-align:center;"> <img src="./images/22.png" width= 300 length= 400 > 
+
 
 ###
 
@@ -180,22 +184,23 @@ Prerequisite:
 1. [Login](https://login.okta.com/signin/?SAMLRequest=fc%2B7CsJAEAXQXvAflu1NNJUMeZBGELTx1a%2FrYILJTtyZGD%2FfSBRiYzlw77lMnD3rSj3Qc0ku0YtgrhU6S5fSXRN9PKxmS52l00nMpq6iBvJWCrfDe4ss6vStRe9aDzmGIZfo1jsgwyWDMzUyiIV9vt1AH4XGk5ClSvewUgMNa%2BYW%2FVj5jxhm9NLP67QQaSAMu64L6CYmsFSHlnzT4ZlLwTgcL6Sf8%2FeX9AU%3D) to Okta
 
 1. On the **administrator dashboard** , click **Add Applications** and select **Create New App Integration.**
+</p> <p style="text-align:center;"> <img src="./images/okta1.png" width= 400 length= 200 > </p>
 
-![](./images/okta2.png)
+</p> <p style="text-align:center;"> <img src="./images/okta2.png" width= 400 length= 200 > </p>
 
 1. Enter the following details in the form and then click Create.
   - Sign in method: Select SAML 2.0.
 
-![](./images/okta3.png)
+</p> <p style="text-align:center;"> <img src="./images/okta3.png" width= 400 length= 200 > </p>
 
 1. Enter the following details in the General Settings form and click **Next**.
   - App name: **Styra (or anything you prefer).**
 
-![](./images/okta4.png)
+</p> <p style="text-align:center;"> <img src="./images/okta4.png" width= 400 length= 200 > </p>
 
 1. Enter the following details in the SAML Settings located in the **General Settings** form and then click **Next**.
 
-![](./images/okta5.png)
+</p> <p style="text-align:center;"> <img src="./images/okta5.png" width= 400 length= 200 > </p>
 
 - **Single sign on URL:** For example, in https://styra-das-id.styra.com/v1/saml/ssosaml/callback replace styra-das-id.styra.com with your tenant name and ssosaml with the provider name.
 
@@ -208,29 +213,29 @@ Prerequisite:
 
 - Name ID Format: **EmailAddress**.
 
-![](./images/okta6.png)
+</p> <p style="text-align:center;"> <img src="./images/okta6.png" width= 300 length= 200 > </p>
 
 1. Select an appropriate option on the **Help Okta Support** understand how you configured this application form and click **Finish**.
 
 1. The next form shows the settings you have created.
   - On the **General tab,** confirm the **SAML settings and configure** any additional specific settings if needed.
 
-![](./images/okta7.png)
+</p> <p style="text-align:center;"> <img src="./images/okta7.png" width= 400 length= 200 > </p>
 
 1. Select the **Sign On tab** and click on the **View Setup Instructions button**.
   - From the **Optional section at the bottom** , record the **IDP metadata** from **the Provide the following IDP metadata to your SP provider field**. This value will be used when you configure the settings on styra-das-id.styra.com.
 
-![](./images/okta8.png)
+</p> <p style="text-align:center;"> <img src="./images/okta8.png" width= 300 length= 200 > </p>
 
 1. Now, select the **Assignments tab** to identify the users entitled to access styra-das-id.styra.com.
   - Click **Assign** , select **Assign to People**.
 
-![](./images/okta9.png)
+</p> <p style="text-align:center;"> <img src="./images/okta9.png" width= 400 length= 300 > </p>
 
 - Click **Assign** and Save to go back to the selected people.
 - When all the users are assigned, click **Done**.
 
-![](./images/okta10.png)
+</p> <p style="text-align:center;"> <img src="./images/okta10.png" width= 200 length= 400 > </p>
 
 ## **Styra Configuration** [**​**](https://docs.styra.com/administration/sso-authentication/saml/okta#styra-configuration)
 
@@ -238,11 +243,11 @@ After you configure Okta, you must configure styra-das-id.styra.com.
 
 1. Login to styra-das-id.styra.com with your **username and password**.
 
-![](./images/okta11.png)
+</p> <p style="text-align:center;"> <img src="./images/okta11.png" width= 400 length= 200 > </p>
 
 1. Go to your Workspace, click A **ccess Control \>\> Single Sign-On Providers and then click SAML \>\> + Add SAML Provider.**
 
-![](./images/okta12.png)
+</p> <p style="text-align:center;"> <img src="./images/okta12.png" width= 500 length= 300 > </p>
 
 1. Enter the following details in the form.
   - **Provider name:** Enter the name for your identity provider setting.
@@ -254,18 +259,18 @@ After you configure Okta, you must configure styra-das-id.styra.com.
 
 Note: Type the above command in your terminal, it will generate private.key and certificate.cert files.
 
-![](./images/okta13.png)
+</p> <p style="text-align:center;"> <img src="./images/okta13.png" width= 500 length= 300 > </p>
 
 - **Private key certificate:** Enter the above generated certificate.
 
 - **Identity provider metadata** : Enter the IDP metadata.
 
-![](./images/okta14.png)
+</p> <p style="text-align:center;"> <img src="./images/okta14.png" width= 300 length= 400 > </p>
 
 - **Email attribute** : Leave it empty as the SAML response from Okta does have the email address in the Subject tag.
 - **Allowed Domains:** Type the allowed authentication domain(s) of your users. For example, (zelarsoft.com). If the identity provider supports multiple domains, only users with these domains are allowed to access the service.
 
-![](./images/okta15.png)
+</p> <p style="text-align:center;"> <img src="./images/okta15.png" width= 300 length= 200 > </p>
 
 - Allow identity provider to initiate sign in:
   - **If enabled,** identity provider can initiate the single sign on.
@@ -275,17 +280,17 @@ Note: Type the above command in your terminal, it will generate private.key and 
   - **If disabled,** a new user account will be created just-in-time for any authenticated user, as long as the user's domain matches one of the allowed domains (and the identity provider has assigned the new user to the Styra application).
 - **Enabled:** Set it to TRUE.
 
-![](./images/okta16.png)
+</p> <p style="text-align:center;"> <img src="./images/okta16.png" width= 300 length= 400 > </p>
 
 1. If you have selected just-in-time provisioning for the users, then you can now logout from styra-das-id.styra.com and sign-in again through SAML. SAML is now displayed on the styra-das-id.styra.com login screen above the username and password.
 
-![](./images/A1.png)
+</p> <p style="text-align:center;"> <img src="./images/okta17.png" width= 300 length= 400 > </p>
 
 **System creation in DAS:**
 
 - Login to StyraDAS tenent
 
-![](./images/A1.png)
+</p> <p style="text-align:center;"> <img src="./images/A1.png" width= 300 length= 200 > </p>
 
 - Styra DAS account is required
 - If you don't have a Styra DAS tenant, you can [sign up for a free tenant here](https://signup.styra.com/?_ga=2.47247396.283531518.1641954102-757179015.1635396444)([Signup](https://signup.styra.com/?_ga=2.47247396.283531518.1641954102-757179015.1635396444))
@@ -296,7 +301,7 @@ To demonstrate the enforcement of ingress and egress policies for a sample appli
 
 To add a new Istio system, click the ( ⨁ ) plus icon next to SYSTEMS on the left side of the navigation panel.
 
-![](./images/A2.png)
+</p> <p style="text-align:center;"> <img src="./images/A2.png" width= 300 length= 200 > </p>
 
 Create an Istio System in StyraDAS
 
@@ -325,7 +330,8 @@ HTTPS
 
 Styra recommends to use a GitHub Personal access token. You can generate a token at [github.com/settings/token](https://github.com/settings/tokens) or by clicking through Your-picture and navigate to Settings \>\> Developer Settings \>\> Personal access tokens.
 
-- Git repository (required): A Git **HTTPS URL** to your Git repository. For example: ![](./images/A3.png)
+- Git repository (required): A Git **HTTPS URL** to your Git repository. For example: 
+ </p> <p style="text-align:center;"> <img src="./images/A3.png" width= 400 length= 300 > </p>
 - Git reference: Specify a tag or branch reference (defaults to refs/heads/master—the master branch).
 - Git commit SHA: Specify a commit SHA.
 - Repository path: (_Optional_) The subdirectory where you want to save the policies.
@@ -334,11 +340,11 @@ Click the Save changes button.
 
 - Click on Test connection and we can observe the connected with green tick mark as below
 
-![](./images/A4.png)
+</p> <p style="text-align:center;"> <img src="./images/A4.png" width= 400 length= 300 > </p>
 
 - We can also notice that the Git repository has been tracked along with the master branch as reference.
 
-![](./images/A5.png)
+</p> <p style="text-align:center;"> <img src="./images/A5.png" width= 400 length= 300 > </p>
 
 **Git as a storage:**
 
@@ -347,15 +353,15 @@ Styra DAS supports using Git as a storage mechanism for policies. Each system ca
 - Make a policy change in the Styra editor.
 - Promote the change. Styra pushes this policy to our GitHub repository in a special branch.
 
-![](./images/A6.png)
+</p> <p style="text-align:center;"> <img src="./images/A6.png" width= 300 length= 200 > </p>
 
 After pushing the changes we see the differences in the Github repository as below
 
-![](./images/A7.png)
+</p> <p style="text-align:center;"> <img src="./images/A7.png" width= 300 length= 200 > </p>
 
 And the rego policy file will be added.
 
-![](./images/A8.png)
+</p> <p style="text-align:center;"> <img src="./images/A8.png" width= 300 length= 200 > </p>
 
 **Creating a System in Styra DAS using API**
 
@@ -369,11 +375,11 @@ Prerequisite:
 
 - Go to WorkSpace —--> Settings —-> API Tokens and click on Add API Token as shown below.
 
-![](./images/B1.png)
+</p> <p style="text-align:center;"> <img src="./images/B1.png" width= 300 length= 200 > </p>
 
 - Add the required fields and click on Add API token and save the API Token
 
-![](./images/B2.png)
+</p> <p style="text-align:center;"> <img src="./images/B2.png" width= 300 length= 200 > </p>
 
 **Create a Envoy System:**
 
@@ -391,7 +397,8 @@ Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSyst
   - System type (required)
   - System name (required)
 
-We can see the system Created in the UI as shown below.. ![](./images/B3.png)
+We can see the system Created in the UI as shown below.. 
+</p> <p style="text-align:center;"> <img src="./images/B3.png" width= 300 length= 200 > </p>
 
 **Git Integration**
 
@@ -429,13 +436,13 @@ being used by someone.
 
 ```ssh-keygen -t rsa -b 4096 -C "Email"```
 
-![](./images/B4.png)
+</p> <p style="text-align:center;"> <img src="./images/B4.png" width= 500 length= 200 > </p>
 
 - Click enter
 - Enter passphrase or leave it blank and click enter
 - SSH key is created in the .ssh folder
 
-![](./images/B5.png)
+</p> <p style="text-align:center;"> <img src="./images/B5.png" width= 500 length= 200 > </p>
 
 - Copy the **id\_rsa.pub** key and add it to your Github account.
 - To add the key to github go to **settings —SSH and GPG keys** and click on the **new ssh key** and paste the public key and save it.
@@ -514,9 +521,9 @@ curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -
 ```
 - The envoy system created with ssh Git integration as shown below.
 
-![](./images/B6.png)
+</p> <p style="text-align:center;"> <img src="./images/B6.png" width= 400 length= 300 > </p>
 
-![](./images/B7.png)
+</p> <p style="text-align:center;"> <img src="./images/B7.png" width= 400 length= 300 > </p>
 
 (After clicking the Test-connection button in DAS- The above error came)
 
@@ -573,7 +580,7 @@ curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -
 ```
 The envoy system created with https Git integration as shown below.
 
-![](./images/B8.png)
+</p> <p style="text-align:center;"> <img src="./images/B8.png" width= 400 length= 300 > </p>
 
 **Creation of Stack and adding systems to stack:**
 
@@ -588,7 +595,7 @@ The envoy system created with https Git integration as shown below.
 4. It is optional to type a description in the **Description** field.
 5. Click **Add stack**.
 
-![](./images/C1.png)
+</p> <p style="text-align:center;"> <img src="./images/C1.png" width= 300 length= 200 > </p>
 
 **Add Systems to Stack:**
 
@@ -601,11 +608,11 @@ System label and selector label should match in order to apply stack rules to th
 1. Open the **Selectors** module.
 2. Fill out the include Key and Values fields with a label key-value pair, such as "environment" and "Dev" as shown in the below image..
 
-![](./images/C2.png)
+</p> <p style="text-align:center;"> <img src="./images/C2.png" width= 400 length= 300 > </p>
 
 3. Click on the **publish** icon in order to activate your changes.
 
-![](./images/C3.png)
+</p> <p style="text-align:center;"> <img src="./images/C3.png" width= 300 length= 200 > </p>
 
 **Add a label to the system:**
 
@@ -615,7 +622,7 @@ System label and selector label should match in order to apply stack rules to th
 4. Enter a "Key and Value" pair that matches the selector you defined previously.
 5. Click on the publish icon to activate your changes.
 
-![](./images/C4.png)
+</p> <p style="text-align:center;"> <img src="./images/C4.png" width= 400 length= 300 > </p>
 
 **Verify the connection:**
 
@@ -624,7 +631,7 @@ To verify if the systems are connected to your stack:
 1. Return to the stack's Selectors module.
 2. Click the Preview button and you can see the corresponding system name and id as shown in the image below.
 
-![](./images/c5.png)
+</p> <p style="text-align:center;"> <img src="./images/C5.png" width= 400 length= 300 > </p>
 
 **Add a Stack Rule:**
 
@@ -640,12 +647,12 @@ You can click Validate while viewing a stack policy to run tests, perform an aud
 
 By validating we can check whether the system is compliant or not as shown in the below images.
 
-![](./images/C6.png)
+</p> <p style="text-align:center;"> <img src="./images/C6.png" width= 400 length= 300 > </p>
 
-![](./images/C7.png)
+</p> <p style="text-align:center;"> <img src="./images/C7.png" width= 400 length= 300 > </p>
 
 The Compliance pane only lists violations of the stack's rules and the Decisions pane only displays outcomes that changed because of a stack rule.
 
-![](./images/C8.png)
+</p> <p style="text-align:center;"> <img src="./images/C8.png" width= 400 length= 300 > </p>
 
 After validating you can click the publish icon to apply your changes.
