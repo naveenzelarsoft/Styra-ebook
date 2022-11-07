@@ -398,7 +398,7 @@ Documentation [Link](https://docs.styra.com/api#tag/systems/operation/CreateSyst
   - System name (required)
 
 We can see the system Created in the UI as shown below.. 
-</p> <p style="text-align:center;"> <img src="./images/B3.png" width= 300 length= 200 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B3.png" width= 400 length= 200 > </p>
 
 **Git Integration**
 
@@ -436,13 +436,13 @@ being used by someone.
 
 ```ssh-keygen -t rsa -b 4096 -C "Email"```
 
-</p> <p style="text-align:center;"> <img src="./images/B4.png" width= 500 length= 200 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B4.png" width= 500 length= 300 > </p>
 
 - Click enter
 - Enter passphrase or leave it blank and click enter
 - SSH key is created in the .ssh folder
 
-</p> <p style="text-align:center;"> <img src="./images/B5.png" width= 500 length= 200 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B5.png" width= 400 length= 200 > </p>
 
 - Copy the **id\_rsa.pub** key and add it to your Github account.
 - To add the key to github go to **settings —SSH and GPG keys** and click on the **new ssh key** and paste the public key and save it.
