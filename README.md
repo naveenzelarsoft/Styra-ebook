@@ -235,7 +235,7 @@ Prerequisite:
 - Click **Assign** and Save to go back to the selected people.
 - When all the users are assigned, click **Done**.
 
-</p> <p style="text-align:center;"> <img src="./images/okta10.png" width= 200 length= 400 > </p>
+</p> <p style="text-align:center;"> <img src="./images/okta10.png" width= 200 length= 300 > </p>
 
 ## **Styra Configuration** [**​**](https://docs.styra.com/administration/sso-authentication/saml/okta#styra-configuration)
 
@@ -331,7 +331,7 @@ HTTPS
 Styra recommends to use a GitHub Personal access token. You can generate a token at [github.com/settings/token](https://github.com/settings/tokens) or by clicking through Your-picture and navigate to Settings \>\> Developer Settings \>\> Personal access tokens.
 
 - Git repository (required): A Git **HTTPS URL** to your Git repository. For example: 
- </p> <p style="text-align:center;"> <img src="./images/A3.png" width= 400 length= 300 > </p>
+ </p> <p style="text-align:center;"> <img src="./images/A3.png" width= 500 length= 300 > </p>
 - Git reference: Specify a tag or branch reference (defaults to refs/heads/master—the master branch).
 - Git commit SHA: Specify a commit SHA.
 - Repository path: (_Optional_) The subdirectory where you want to save the policies.
@@ -375,7 +375,7 @@ Prerequisite:
 
 - Go to WorkSpace —--> Settings —-> API Tokens and click on Add API Token as shown below.
 
-</p> <p style="text-align:center;"> <img src="./images/B1.png" width= 300 length= 200 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B1.png" width= 400 length= 200 > </p>
 
 - Add the required fields and click on Add API token and save the API Token
 
@@ -521,9 +521,9 @@ curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -
 ```
 - The envoy system created with ssh Git integration as shown below.
 
-</p> <p style="text-align:center;"> <img src="./images/B6.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B6.png" width= 500 length= 300 > </p>
 
-</p> <p style="text-align:center;"> <img src="./images/B7.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B7.png" width= 500 length= 300 > </p>
 
 (After clicking the Test-connection button in DAS- The above error came)
 
@@ -580,7 +580,7 @@ curl -H "Content-Type: application/json" -H 'Authorization: Bearer API\_TOKEN' -
 ```
 The envoy system created with https Git integration as shown below.
 
-</p> <p style="text-align:center;"> <img src="./images/B8.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/B8.png" width= 500 length= 300 > </p>
 
 **Creation of Stack and adding systems to stack:**
 
@@ -608,7 +608,7 @@ System label and selector label should match in order to apply stack rules to th
 1. Open the **Selectors** module.
 2. Fill out the include Key and Values fields with a label key-value pair, such as "environment" and "Dev" as shown in the below image..
 
-</p> <p style="text-align:center;"> <img src="./images/C2.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/C2.png" width= 500 length= 300 > </p>
 
 3. Click on the **publish** icon in order to activate your changes.
 
@@ -631,7 +631,7 @@ To verify if the systems are connected to your stack:
 1. Return to the stack's Selectors module.
 2. Click the Preview button and you can see the corresponding system name and id as shown in the image below.
 
-</p> <p style="text-align:center;"> <img src="./images/C5.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/C5.png" width= 500 length= 300 > </p>
 
 **Add a Stack Rule:**
 
