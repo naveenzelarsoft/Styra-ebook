@@ -612,7 +612,7 @@ System label and selector label should match in order to apply stack rules to th
 
 3. Click on the **publish** icon in order to activate your changes.
 
-</p> <p style="text-align:center;"> <img src="./images/C3.png" width= 300 length= 200 > </p>
+</p> <p style="text-align:center;"> <img src="./images/C3.png" width= 200 length= 100 > </p>
 
 **Add a label to the system:**
 
@@ -647,12 +647,12 @@ You can click Validate while viewing a stack policy to run tests, perform an aud
 
 By validating we can check whether the system is compliant or not as shown in the below images.
 
-</p> <p style="text-align:center;"> <img src="./images/C6.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/C6.png" width= 500 length= 300 > </p>
 
-</p> <p style="text-align:center;"> <img src="./images/C7.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/C7.png" width= 500 length= 300 > </p>
 
 The Compliance pane only lists violations of the stack's rules and the Decisions pane only displays outcomes that changed because of a stack rule.
 
-</p> <p style="text-align:center;"> <img src="./images/C8.png" width= 400 length= 300 > </p>
+</p> <p style="text-align:center;"> <img src="./images/C8.png" width= 500 length= 300 > </p>
 
 After validating you can click the publish icon to apply your changes.
